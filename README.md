@@ -1,16 +1,14 @@
-## Hi there 👋
-
-<!--
-**TheFoolishDev/TheFoolishDev** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<table border="0">
+  <tr>
+    <td width="40%">
+      <!-- Tu arte ASCII aquí -->
+    </td>
+    <td width="60%">
+      <pre>
+Subject      : TheFoolishDev
+Role         : Full-Stack Dev
+Tools        : Whathever it takes
+      </pre>
+    </td>
+  </tr>
+</table>
