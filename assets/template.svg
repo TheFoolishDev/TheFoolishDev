@@ -43,9 +43,7 @@
       Reemplaza el 'href' por la ruta de tu imagen (ej. "assets/tu-foto.png" o un Base64).
       El filtro de líneas horizontales se aplicará encima automáticamente.
     -->
-    <image href="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&amp;auto=format&amp;fit=crop&amp;q=60" 
-           x="10" y="10" width="260" height="350" preserveAspectRatio="xMidYMid slice" 
-           style="filter: grayscale(100%) contrast(140%) brightness(90%);" />
+    <image href="./asciify.png" x="10" y="10" width="260" height="350" preserveAspectRatio="xMidYMid slice" style="filter: grayscale(100%) contrast(140%) brightness(90%);" />
 
     <!-- Capa de scanlines (líneas de monitor CRT) -->
     <rect x="10" y="10" width="260" height="350" fill="url(#scanlines)" opacity="0.65" />
