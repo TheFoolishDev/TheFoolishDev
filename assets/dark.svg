@@ -1,0 +1,464 @@
+<svg id="svg-dark-root" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="100%" height="100%">
+            <defs>
+              <style>
+                @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap');
+                .f-inter { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+                .f-mono { font-family: 'JetBrains Mono', monospace; }
+                
+                /* Micro ASCII Styling: fits 80-120 columns and is centered */
+                .ascii-matrix-dark {
+                  font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+                  font-size: 5.25px;
+                  font-weight: 600;
+                  letter-spacing: -0.15px;
+                  text-anchor: middle;
+                  fill: url(#ascii-grad-dark);
+                }
+
+                @keyframes roleCycle {
+                  0%, 18%   { opacity: 1; }
+                  20%, 100% { opacity: 0; }
+                }
+                .role-1 { animation: roleCycle 14s infinite 0s; }
+                .role-2 { animation: roleCycle 14s infinite 2.8s; opacity: 0; }
+                .role-3 { animation: roleCycle 14s infinite 5.6s; opacity: 0; }
+                .role-4 { animation: roleCycle 14s infinite 8.4s; opacity: 0; }
+                .role-5 { animation: roleCycle 14s infinite 11.2s; opacity: 0; }
+
+                @keyframes blinkCursor {
+                  0%, 49% { opacity: 1; }
+                  50%, 100% { opacity: 0; }
+                }
+                .cur-blink { animation: blinkCursor 0.85s infinite; }
+
+                .skill-pill {
+                  transition: transform 0.25s ease, filter 0.25s ease;
+                  cursor: pointer;
+                }
+                .skill-pill:hover {
+                  transform: translateY(-2px) scale(1.03);
+                  filter: drop-shadow(0 0 10px rgba(34, 211, 238, 0.7));
+                }
+                .social-icon-btn {
+                  transition: transform 0.2s ease, filter 0.2s ease;
+                  cursor: pointer;
+                }
+                .social-icon-btn:hover {
+                  transform: translateY(-2px);
+                  filter: drop-shadow(0 0 8px rgba(124, 58, 237, 0.8));
+                }
+              </style>
+
+              <!-- Radial Background Glows -->
+              <radialGradient id="bg-grad-dark-1" cx="25%" cy="20%" r="65%">
+                <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.22">
+                  <animate attributeName="stop-color" values="#7C3AED;#22D3EE;#10B981;#7C3AED" dur="20s" repeatCount="indefinite"/>
+                </stop>
+                <stop offset="60%" stop-color="#0F172A" stop-opacity="0.4"/>
+                <stop offset="100%" stop-color="#030712" stop-opacity="1"/>
+              </radialGradient>
+
+              <radialGradient id="bg-grad-dark-2" cx="80%" cy="85%" r="70%">
+                <stop offset="0%" stop-color="#10B981" stop-opacity="0.18">
+                  <animate attributeName="stop-color" values="#10B981;#7C3AED;#22D3EE;#10B981" dur="22s" repeatCount="indefinite"/>
+                </stop>
+                <stop offset="65%" stop-color="#0F172A" stop-opacity="0.3"/>
+                <stop offset="100%" stop-color="#030712" stop-opacity="1"/>
+              </radialGradient>
+
+              <!-- Dynamic Linear Accent Gradient -->
+              <linearGradient id="accent-grad-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#7C3AED">
+                  <animate attributeName="stop-color" values="#7C3AED;#22D3EE;#10B981;#7C3AED" dur="10s" repeatCount="indefinite"/>
+                </stop>
+                <stop offset="50%" stop-color="#22D3EE">
+                  <animate attributeName="stop-color" values="#22D3EE;#10B981;#7C3AED;#22D3EE" dur="10s" repeatCount="indefinite"/>
+                </stop>
+                <stop offset="100%" stop-color="#10B981">
+                  <animate attributeName="stop-color" values="#10B981;#7C3AED;#22D3EE;#10B981" dur="10s" repeatCount="indefinite"/>
+                </stop>
+              </linearGradient>
+
+              <!-- Dynamic Moving ASCII Gradient -->
+              <linearGradient id="ascii-grad-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#22D3EE">
+                  <animate attributeName="stop-color" values="#22D3EE;#A855F7;#38BDF8;#22D3EE" dur="8s" repeatCount="indefinite"/>
+                </stop>
+                <stop offset="100%" stop-color="#C084FC">
+                  <animate attributeName="stop-color" values="#C084FC;#10B981;#22D3EE;#C084FC" dur="8s" repeatCount="indefinite"/>
+                </stop>
+              </linearGradient>
+
+              <!-- Shimmering Border -->
+              <linearGradient id="border-shimmer-dark" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="rgba(255,255,255,0.06)"/>
+                <stop offset="50%" stop-color="rgba(34,211,238,0.7)">
+                  <animate attributeName="offset" values="0; 1; 0" dur="6s" repeatCount="indefinite"/>
+                </stop>
+                <stop offset="100%" stop-color="rgba(255,255,255,0.06)"/>
+              </linearGradient>
+
+              <!-- Pill Stroke Gradient -->
+              <linearGradient id="pill-stroke-dark" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.4"/>
+                <stop offset="100%" stop-color="#22D3EE" stop-opacity="0.4"/>
+              </linearGradient>
+
+              <!-- Noise Texture -->
+              <filter id="noise-dark" x="0%" y="0%" width="100%" height="100%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch" result="noise"/>
+                <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.035 0"/>
+              </filter>
+
+              <clipPath id="canvas-clip-dark">
+                <rect x="0" y="0" width="1200" height="620" rx="26" ry="26"/>
+              </clipPath>
+
+              <!-- Scanline pattern -->
+              <pattern id="scanlines-pattern-dark" width="100" height="4" patternUnits="userSpaceOnUse">
+                <line x1="0" y1="2" x2="100" y2="2" stroke="#000000" stroke-opacity="0.32" stroke-width="1.2"/>
+              </pattern>
+            </defs>
+
+            <!-- Card Background -->
+            <g clip-path="url(#canvas-clip-dark)">
+              <rect x="0" y="0" width="1200" height="620" fill="#030712"/>
+              <rect x="0" y="0" width="1200" height="620" fill="url(#bg-grad-dark-1)"/>
+              <rect x="0" y="0" width="1200" height="620" fill="url(#bg-grad-dark-2)"/>
+
+              <circle cx="280" cy="220" r="170" fill="#7C3AED" opacity="0.14">
+                <animateTransform attributeName="transform" type="translate" values="0,0; 25,20; -15,10; 0,0" dur="14s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="980" cy="380" r="180" fill="#22D3EE" opacity="0.12">
+                <animateTransform attributeName="transform" type="translate" values="0,0; -25,-25; 15,-20; 0,0" dur="16s" repeatCount="indefinite"/>
+              </circle>
+
+              <rect x="0" y="0" width="1200" height="620" filter="url(#noise-dark)"/>
+
+              <g stroke="rgba(255, 255, 255, 0.022)" stroke-width="1">
+                <line x1="0" y1="124" x2="1200" y2="124"/>
+                <line x1="0" y1="248" x2="1200" y2="248"/>
+                <line x1="0" y1="372" x2="1200" y2="372"/>
+                <line x1="0" y1="496" x2="1200" y2="496"/>
+                <line x1="300" y1="0" x2="300" y2="620"/>
+                <line x1="600" y1="0" x2="600" y2="620"/>
+                <line x1="900" y1="0" x2="900" y2="620"/>
+              </g>
+
+              <line x1="0" y1="0" x2="1200" y2="0" stroke="url(#accent-grad-dark)" stroke-width="1.5" opacity="0.3">
+                <animateTransform attributeName="transform" type="translate" values="0,-10; 0,640" dur="8s" repeatCount="indefinite"/>
+              </line>
+
+              <!-- ==============================================
+                   EXPANDED LEFT SECTION (ASCII PANEL: 550px WIDE)
+                   ============================================== -->
+              <g transform="translate(24, 24)">
+                <!-- Glass panel for ASCII: Width 550, Height 572 -->
+                <rect x="0" y="0" width="550" height="572" rx="18" ry="18" fill="#0B132B" fill-opacity="0.72" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1.2"/>
+                
+                <!-- Terminal Header Bar -->
+                <path d="M 0 18 A 18 18 0 0 1 18 0 L 532 0 A 18 18 0 0 1 550 18 L 550 42 L 0 42 Z" fill="#060913" fill-opacity="0.75"/>
+                <line x1="0" y1="42" x2="550" y2="42" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+                <circle cx="22" cy="21" r="5" fill="#EF4444" opacity="0.8"/>
+                <circle cx="39" cy="21" r="5" fill="#F59E0B" opacity="0.8"/>
+                <circle cx="56" cy="21" r="5" fill="#10B981" opacity="0.8"/>
+                
+                <text x="80" y="25" class="f-mono" font-size="11" font-weight="600" fill="#94A3B8" letter-spacing="1">ASCII_NEURAL_STREAM // CENTERED</text>
+                
+                <rect x="440" y="12" width="94" height="19" rx="9.5" fill="#1E293B" stroke="rgba(34,211,238,0.25)" stroke-width="0.8"/>
+                <circle cx="452" cy="21.5" r="3" fill="#10B981">
+                  <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>
+                </circle>
+                <text x="462" y="25" class="f-mono" font-size="9" font-weight="600" fill="#22D3EE">CENTERED</text>
+
+                <!-- Floating ASCII Container -->
+                <g transform="translate(0, 0)">
+                  <animateTransform attributeName="transform" type="translate" values="0,0; 0,-5; 0,0" dur="5.5s" repeatCount="indefinite" ease="easeInOut"/>
+
+                  <!-- PERFECT HORIZONTAL & VERTICAL CENTERING:
+                       Axis: x="275" (550 / 2) with text-anchor="middle"
+                       Vertical Baseline: y="76" calculated for full vertical balance -->
+                  <text id="asciiDarkTarget" x="275" y="65" class="ascii-matrix-dark" xml:space="preserve"><tspan x="275" dy="0">                                                              .                                                         </tspan>
+<tspan x="275" dy="5.88">                                                              .                                                         </tspan>
+<tspan x="275" dy="5.88">                                                             .:                                                         </tspan>
+<tspan x="275" dy="5.88">                                                             -:                                                         </tspan>
+<tspan x="275" dy="5.88">                                                             +:                                                         </tspan>
+<tspan x="275" dy="5.88">                                                            :#-                                                         </tspan>
+<tspan x="275" dy="5.88">                                                           .:%-.                                                        </tspan>
+<tspan x="275" dy="5.88">                                                         -.*@@-.                                                        </tspan>
+<tspan x="275" dy="5.88">                                                   .%..=%@@%@@-.                                                        </tspan>
+<tspan x="275" dy="5.88">                                              :%+..=%@%%%%@@@@=.                                                        </tspan>
+<tspan x="275" dy="5.88">                                              .=%@@%#%%%%%%@@%-.                                                        </tspan>
+<tspan x="275" dy="5.88">                                          .-#%@%%%%%%###=:=@@@-.                                                        </tspan>
+<tspan x="275" dy="5.88">                                      .:*%%@%%%%%##=+.  .-*@@@-.                                                        </tspan>
+<tspan x="275" dy="5.88">                            :--:.-+###%@@@%%%#*-.. -- .:.:@@@@-.                                                        </tspan>
+<tspan x="275" dy="5.88">                          .=        .-:-%@@%%++:.    == .:@@@@:.    .                                                   </tspan>
+<tspan x="275" dy="5.88">                            .= -:      .=.#@@@%#-:.    ..=%@@@-.    -                                                   </tspan>
+<tspan x="275" dy="5.88">                             .:= :.      .-=%@@@@%+=::...*%@@@:.    =                                                   </tspan>
+<tspan x="275" dy="5.88">                                .+         .:*%@%%%@*=-::#@@@@::    +                                                   </tspan>
+<tspan x="275" dy="5.88">                                  .*.-       .-+@@@@@@%++#@@@%=:    +                                                   </tspan>
+<tspan x="275" dy="5.88">                                    -#=---.     .%@@@@@@%%@@@@==    +.                                                  </tspan>
+<tspan x="275" dy="5.88">                                   .+.        .:#@@@@@%@@%@@@@+-    =.                                                  </tspan>
+<tspan x="275" dy="5.88">                                 +-         .:*@%%@%@%=-=%%%@@*:    -:.                                                 </tspan>
+<tspan x="275" dy="5.88">                               *          ..#@%%%%%#+: .:@%@@%*.    =-.                                                 </tspan>
+<tspan x="275" dy="5.88">                             +          ::%%%%@%##-.   .#%%%@%#.    +-.                                                 </tspan>
+<tspan x="275" dy="5.88">                           .+        ..=@@@%%%#*:..     @%%%%@#.    +-.                                                 </tspan>
+<tspan x="275" dy="5.88">                      ..  %+=+**#**##%@@@@@@%-.:       .%%%%%@#:    +-:                                                 </tspan>
+<tspan x="275" dy="5.88">                       .:  -.       .:.+%@@%%@%=:.     =%%%%@@#.    +-:.                                                </tspan>
+<tspan x="275" dy="5.88">                         .:  -.       :+:=%%@@%@%#=::: *%%%@%@#.    --:.                                                </tspan>
+<tspan x="275" dy="5.88">                           ..  -:        =:=%%@%%%%%+:.*@@%@@@*     =--:.                                               </tspan>
+<tspan x="275" dy="5.88">                             .   -:        =:-*%%%%%%%%#@@%@@@+.    :%+-:.                                              </tspan>
+<tspan x="275" dy="5.88">                                   --        :::+%%%%%%%@@%%@@: .     -#-:.                                             </tspan>
+<tspan x="275" dy="5.88">                                     -:        :*:*%%%%%%@%@@@=:=.      -*:.                                            </tspan>
+<tspan x="275" dy="5.88">                                 .     :--:      =.:=%%@%%@@@@@%-:.       :+.                                           </tspan>
+<tspan x="275" dy="5.88">                                   .     ::--     + ..=%@@@@@@@%%%--        :+                                          </tspan>
+<tspan x="275" dy="5.88">                                    .      :=     *  .:@@@@@@@@@@@@%=:        .=                                        </tspan>
+<tspan x="275" dy="5.88">                                      *:     .+   %   :@%@@@@@@@@@@%@%+:        ::                                      </tspan>
+<tspan x="275" dy="5.88">                                      = .-      #.%  .:@%@@@%%@@@@%%@@@@=:.        .                                    </tspan>
+<tspan x="275" dy="5.88">                                      =   .*      *-..:@@%%@@++#%@@@@@@%@%+:.            .                              </tspan>
+<tspan x="275" dy="5.88">                                      -     :+.     .=+@%@@%@*-:-*%@@@@%%@@%#-:.          -                             </tspan>
+<tspan x="275" dy="5.88">                                      :       :=.   ..-@%@@%%+:...-=%@%@@%%%@%%=--.       ..                            </tspan>
+<tspan x="275" dy="5.88">                                      .       ..#-    -@%%@@#:.    .:=#%%%@%@@@@%=--::--:. :                            </tspan>
+<tspan x="275" dy="5.88">                                               .+#:   -@%@@%#:.       .-+%%@@@@@@@@#*+++****#%@#+++-.                   </tspan>
+<tspan x="275" dy="5.88">                                                .=.  .:@%%%%=.       ..:+%@@@@@@%@@+:: .::..... .                       </tspan>
+<tspan x="275" dy="5.88">                                                 :.  ..@%@@%-     ..:*#%%%@@@%%@%=:.    .                               </tspan>
+<tspan x="275" dy="5.88">                                                      :@@@%%:   ::=@@@%%%@@%%%=:.                                       </tspan>
+<tspan x="275" dy="5.88">                                                      -@@@@=:-.:=@@@@@@@@%%+:.                                          </tspan>
+<tspan x="275" dy="5.88">                                                     .:@@@@+:-%@@@@@%@%%*-.                                             </tspan>
+<tspan x="275" dy="5.88">                                                     .:%@@%-%@@@@@@@@%=.. .#*+                                          </tspan>
+<tspan x="275" dy="5.88">                                                     .+%@@%++-+@@@@@@-:  :%-%@@                                         </tspan>
+<tspan x="275" dy="5.88">                                     .             - .#@@@@*.  .+@@@@@=+  -:.#.                                         </tspan>
+<tspan x="275" dy="5.88">                                     .          .. =#.:#@@%-::.  :%%%@@#:                                               </tspan>
+<tspan x="275" dy="5.88">                                     -.         :*. *=.*@@@%*..*. .-%@@@#:.                                             </tspan>
+<tspan x="275" dy="5.88">                                     =.      .*+.#.   .*@@%-::=  *. :#@@@%--                                            </tspan>
+<tspan x="275" dy="5.88">                                     -.    =* =    :*..*@@#..   . -- .:%@@@+=.                                          </tspan>
+<tspan x="275" dy="5.88">                                     ...:+:.    :+     :@@+.        =. .+@@@%-:                                         </tspan>
+<tspan x="275" dy="5.88">                                      #=     ..        :@@+:         %=  :+@@@=:.                                       </tspan>
+<tspan x="275" dy="5.88">                                      =   :   :        .@@=.         =-=:  -#@@*=:                                      </tspan>
+<tspan x="275" dy="5.88">                                      -                :*@-.         .=  +. .-%@@=:                                     </tspan>
+<tspan x="275" dy="5.88">                                      -.-              .-@:.          :+  :+  .+@@+-.         -+.*.* .                  </tspan>
+<tspan x="275" dy="5.88">                                      .                .-@-             +.  +-  :#@%+-    ::+=#.*.+ :                   </tspan>
+<tspan x="275" dy="5.88">                                                        -%:              :*  .#  .=#@+:.   *..                          </tspan>
+<tspan x="275" dy="5.88">                                                        :#.                :*  :-  +=%%:*:.  :#%.                       </tspan>
+<tspan x="275" dy="5.88">                                                        .*.                 .*:  =..*.=@%::                             </tspan>
+<tspan x="275" dy="5.88">                                                        .+.                        =%  .=%::                            </tspan>
+<tspan x="275" dy="5.88">                                                        .+.                         .=   :-::                           </tspan>
+<tspan x="275" dy="5.88">                                                         -                            .:    :                           </tspan>
+<tspan x="275" dy="5.88">                                                         .                              @%                              </tspan>
+<tspan x="275" dy="5.88">                                                         .                               .                              </tspan>
+</text>
+
+                  <!-- Internal Scanline Overlay -->
+                  <rect x="12" y="48" width="526" height="425" fill="url(#scanlines-pattern-dark)" opacity="0.6" pointer-events="none"/>
+                  
+                  <line x1="14" y1="52" x2="538" y2="52" stroke="#22D3EE" stroke-width="1.8" opacity="0.45">
+                    <animateTransform attributeName="transform" type="translate" values="0,0; 0,420; 0,0" dur="5s" repeatCount="indefinite"/>
+                  </line>
+
+                  <!-- Mini Bottom Telemetry Bar -->
+                  <g transform="translate(18, 484)">
+                    <rect x="0" y="0" width="514" height="66" rx="10" ry="10" fill="#030712" fill-opacity="0.8" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+                    
+                    <text x="16" y="22" class="f-mono" font-size="9" fill="#94A3B8">ALIGNMENT MATRIX</text>
+                    <text x="16" y="42" class="f-mono" font-size="12" font-weight="600" fill="#22D3EE">CENTERED [X=275]</text>
+
+                    <line x1="190" y1="12" x2="190" y2="54" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+
+                    <text x="208" y="22" class="f-mono" font-size="9" fill="#94A3B8">TYPOGRAPHY</text>
+                    <text x="208" y="42" class="f-mono" font-size="12" font-weight="600" fill="#F8FAFC">5.25px • DY=6.8</text>
+
+                    <line x1="355" y1="12" x2="355" y2="54" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+
+                    <text x="375" y="22" class="f-mono" font-size="9" fill="#94A3B8">STATUS</text>
+                    <text x="375" y="42" class="f-mono" font-size="12" font-weight="600" fill="#10B981">SYNCED 100%</text>
+                  </g>
+                </g>
+              </g>
+
+              <!-- ==============================================
+                   RIGHT SECTION (TERMINAL & BIO: 585px WIDE)
+                   ============================================== -->
+              <g transform="translate(592, 24)">
+                <rect x="0" y="0" width="584" height="572" rx="18" ry="18" fill="#0F172A" fill-opacity="0.88" stroke="url(#border-shimmer-dark)" stroke-width="1.4"/>
+                
+                <path d="M 0 18 A 18 18 0 0 1 18 0 L 566 0 A 18 18 0 0 1 584 18 L 584 42 L 0 42 Z" fill="#090E17" fill-opacity="0.85"/>
+                <line x1="0" y1="42" x2="584" y2="42" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+                <circle cx="22" cy="21" r="5" fill="#EF4444" opacity="0.85"/>
+                <circle cx="39" cy="21" r="5" fill="#F59E0B" opacity="0.85"/>
+                <circle cx="56" cy="21" r="5" fill="#10B981" opacity="0.85"/>
+
+                <rect x="80" y="10" width="165" height="24" rx="6" fill="#1E293B" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+                <path d="M 94 22 L 102 22 M 98 18 L 102 22 L 98 26" fill="none" stroke="#22D3EE" stroke-width="1.6" stroke-linecap="round"/>
+                <text x="110" y="26" class="f-mono" font-size="11" font-weight="600" fill="#F8FAFC">profile.sys</text>
+
+                <text x="555" y="26" class="f-mono" font-size="10" fill="#64748B" text-anchor="end">zsh • utf-8</text>
+
+                <!-- Terminal Inner Content -->
+                <g transform="translate(32, 68)">
+                  
+                  <!-- Greeting & Name -->
+                  <g>
+                    <text x="0" y="14" class="f-mono" font-size="14" font-weight="500" fill="#22D3EE">$ whoami --verbose</text>
+                    <text x="0" y="48" class="f-inter" font-size="32" font-weight="800" fill="#F8FAFC" letter-spacing="-0.5">
+                      Hi 👋 I'm <tspan fill="url(#accent-grad-dark)">ALEXANDER VANE</tspan>
+                    </text>
+                  </g>
+
+                  <!-- Animated Role Typing Line -->
+                  <g transform="translate(0, 86)">
+                    <text x="0" y="0" class="f-mono" font-size="17" font-weight="600" fill="#94A3B8">&gt; </text>
+                    <g class="role-1"><text x="22" y="0" class="f-mono" font-size="17" font-weight="600" fill="#22D3EE">Frontend Engineer &amp; UI Architect</text></g>
+                    <g class="role-2"><text x="22" y="0" class="f-mono" font-size="17" font-weight="600" fill="#A855F7">Full Stack Developer &amp; Systems Builder</text></g>
+                    <g class="role-3"><text x="22" y="0" class="f-mono" font-size="17" font-weight="600" fill="#10B981">Open Source Contributor &amp; Creator</text></g>
+                    <g class="role-4"><text x="22" y="0" class="f-mono" font-size="17" font-weight="600" fill="#38BDF8">Design Systems &amp; Motion Specialist</text></g>
+                    <g class="role-5"><text x="22" y="0" class="f-mono" font-size="17" font-weight="600" fill="#F59E0B">AI Enthusiast &amp; Cloud Explorer</text></g>
+                    <rect x="385" y="-14" width="8.5" height="17" rx="2" fill="#22D3EE" class="cur-blink"/>
+                  </g>
+
+                  <!-- Bio Metadata Details -->
+                  <g transform="translate(0, 118)">
+                    <g opacity="0">
+                      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.8s" fill="freeze"/>
+                      <circle cx="8" cy="8" r="3.5" fill="#7C3AED"/>
+                      <text x="20" y="12" class="f-mono" font-size="11.5" font-weight="600" fill="#94A3B8">Location:</text>
+                      <text x="120" y="12" class="f-inter" font-size="12" font-weight="500" fill="#F8FAFC">San Francisco, CA / Remote</text>
+                    </g>
+
+                    <g opacity="0" transform="translate(0, 24)">
+                      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.0s" fill="freeze"/>
+                      <circle cx="8" cy="8" r="3.5" fill="#22D3EE"/>
+                      <text x="20" y="12" class="f-mono" font-size="11.5" font-weight="600" fill="#94A3B8">Education:</text>
+                      <text x="120" y="12" class="f-inter" font-size="12" font-weight="500" fill="#F8FAFC">B.S. Computer Science • Stanford Univ</text>
+                    </g>
+
+                    <g opacity="0" transform="translate(0, 48)">
+                      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.2s" fill="freeze"/>
+                      <circle cx="8" cy="8" r="3.5" fill="#10B981"/>
+                      <text x="20" y="12" class="f-mono" font-size="11.5" font-weight="600" fill="#94A3B8">Focus:</text>
+                      <text x="120" y="12" class="f-inter" font-size="12" font-weight="500" fill="#F8FAFC">Scalable UI Architectures &amp; WebGPU</text>
+                    </g>
+
+                    <g opacity="0" transform="translate(0, 72)">
+                      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.4s" fill="freeze"/>
+                      <circle cx="8" cy="8" r="3.5" fill="#F59E0B"/>
+                      <text x="20" y="12" class="f-mono" font-size="11.5" font-weight="600" fill="#94A3B8">Connect:</text>
+                      <text x="120" y="12" class="f-inter" font-size="12" font-weight="500" fill="#38BDF8">vane.dev <tspan fill="#64748B">•</tspan> hello@vane.dev</text>
+                    </g>
+                  </g>
+
+                  <!-- Divider -->
+                  <line x1="0" y1="230" x2="520" y2="230" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+                  <!-- Skill Pills Matrix -->
+                  <g transform="translate(0, 252)">
+                    <text x="0" y="0" class="f-mono" font-size="10.5" font-weight="600" fill="#94A3B8" letter-spacing="1">CORE CAPABILITIES &amp; STACK</text>
+                    
+                    <!-- Row 1 -->
+                    <g transform="translate(0, 14)">
+                      <g class="skill-pill" transform="translate(0, 0)">
+                        <rect width="72" height="26" rx="13" fill="#1E293B" stroke="url(#pill-stroke-dark)" stroke-width="1.2"/>
+                        <circle cx="14" cy="13" r="3" fill="#22D3EE"/>
+                        <text x="24" y="17" class="f-inter" font-size="11" font-weight="600" fill="#F8FAFC">React</text>
+                      </g>
+                      <g class="skill-pill" transform="translate(80, 0)">
+                        <rect width="78" height="26" rx="13" fill="#1E293B" stroke="url(#pill-stroke-dark)" stroke-width="1.2"/>
+                        <circle cx="14" cy="13" r="3" fill="#FFFFFF"/>
+                        <text x="24" y="17" class="f-inter" font-size="11" font-weight="600" fill="#F8FAFC">Next.js</text>
+                      </g>
+                      <g class="skill-pill" transform="translate(166, 0)">
+                        <rect width="98" height="26" rx="13" fill="#1E293B" stroke="url(#pill-stroke-dark)" stroke-width="1.2"/>
+                        <circle cx="14" cy="13" r="3" fill="#3178C6"/>
+                        <text x="24" y="17" class="f-inter" font-size="11" font-weight="600" fill="#F8FAFC">TypeScript</text>
+                      </g>
+                      <g class="skill-pill" transform="translate(272, 0)">
+                        <rect width="80" height="26" rx="13" fill="#1E293B" stroke="url(#pill-stroke-dark)" stroke-width="1.2"/>
+                        <circle cx="14" cy="13" r="3" fill="#10B981"/>
+                        <text x="24" y="17" class="f-inter" font-size="11" font-weight="600" fill="#F8FAFC">Node.js</text>
+                      </g>
+                      <g class="skill-pill" transform="translate(360, 0)">
+                        <rect width="84" height="26" rx="13" fill="#1E293B" stroke="url(#pill-stroke-dark)" stroke-width="1.2"/>
+                        <circle cx="14" cy="13" r="3" fill="#38BDF8"/>
+                        <text x="24" y="17" class="f-inter" font-size="11" font-weight="600" fill="#F8FAFC">Tailwind</text>
+                      </g>
+                      <g class="skill-pill" transform="translate(452, 0)">
+                        <rect width="68" height="26" rx="13" fill="#1E293B" stroke="url(#pill-stroke-dark)" stroke-width="1.2"/>
+                        <circle cx="14" cy="13" r="3" fill="#F59E0B"/>
+                        <text x="24" y="17" class="f-inter" font-size="11" font-weight="600" fill="#F8FAFC">Python</text>
+                      </g>
+                    </g>
+
+                    <!-- Row 2 -->
+                    <g transform="translate(0, 48)">
+                      <g class="skill-pill" transform="translate(0, 0)">
+                        <rect width="78" height="26" rx="13" fill="#1E293B" stroke="url(#pill-stroke-dark)" stroke-width="1.2"/>
+                        <circle cx="14" cy="13" r="3" fill="#2496ED"/>
+                        <text x="24" y="17" class="f-inter" font-size="11" font-weight="600" fill="#F8FAFC">Docker</text>
+                      </g>
+                      <g class="skill-pill" transform="translate(86, 0)">
+                        <rect width="86" height="26" rx="13" fill="#1E293B" stroke="url(#pill-stroke-dark)" stroke-width="1.2"/>
+                        <circle cx="14" cy="13" r="3" fill="#4169E1"/>
+                        <text x="24" y="17" class="f-inter" font-size="11" font-weight="600" fill="#F8FAFC">Postgres</text>
+                      </g>
+                      <g class="skill-pill" transform="translate(180, 0)">
+                        <rect width="64" height="26" rx="13" fill="#1E293B" stroke="url(#pill-stroke-dark)" stroke-width="1.2"/>
+                        <circle cx="14" cy="13" r="3" fill="#FF9900"/>
+                        <text x="24" y="17" class="f-inter" font-size="11" font-weight="600" fill="#F8FAFC">AWS</text>
+                      </g>
+                      <g class="skill-pill" transform="translate(252, 0)">
+                        <rect width="60" height="26" rx="13" fill="#1E293B" stroke="url(#pill-stroke-dark)" stroke-width="1.2"/>
+                        <circle cx="14" cy="13" r="3" fill="#F05032"/>
+                        <text x="24" y="17" class="f-inter" font-size="11" font-weight="600" fill="#F8FAFC">Git</text>
+                      </g>
+                      <g class="skill-pill" transform="translate(320, 0)">
+                        <rect width="72" height="26" rx="13" fill="#1E293B" stroke="url(#pill-stroke-dark)" stroke-width="1.2"/>
+                        <circle cx="14" cy="13" r="3" fill="#A855F7"/>
+                        <text x="24" y="17" class="f-inter" font-size="11" font-weight="600" fill="#F8FAFC">Figma</text>
+                      </g>
+                      <g class="skill-pill" transform="translate(400, 0)">
+                        <rect width="84" height="26" rx="13" fill="#1E293B" stroke="url(#pill-stroke-dark)" stroke-width="1.2"/>
+                        <circle cx="14" cy="13" r="3" fill="#E10098"/>
+                        <text x="24" y="17" class="f-inter" font-size="11" font-weight="600" fill="#F8FAFC">GraphQL</text>
+                      </g>
+                    </g>
+                  </g>
+
+                  <!-- Social Links Bar -->
+                  <g transform="translate(0, 412)">
+                    <rect x="0" y="0" width="520" height="48" rx="12" ry="12" fill="#090E17" fill-opacity="0.9" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+                    <text x="18" y="28" class="f-mono" font-size="10.5" font-weight="600" fill="#94A3B8">CONNECT WITH ME</text>
+                    
+                    <g transform="translate(275, 9)">
+                      <!-- GitHub -->
+                      <g class="social-icon-btn" transform="translate(0, 0)">
+                        <rect width="48" height="28" rx="7" fill="#1E293B" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+                        <path d="M 24 7 C 19.58 7 16 10.58 16 15 C 16 18.53 18.29 21.53 21.46 22.59 C 21.86 22.66 22.01 22.42 22.01 22.2 C 22.01 22.01 22 21.35 22 20.68 C 19.77 21.16 19.31 19.61 19.31 19.61 C 18.95 18.69 18.43 18.44 18.43 18.44 C 17.7 17.94 18.49 17.95 18.49 17.95 C 19.3 18.01 19.73 18.78 19.73 18.78 C 20.45 20.01 21.61 19.66 22.07 19.45 C 22.14 18.93 22.35 18.57 22.58 18.37 C 20.8 18.17 18.93 17.48 18.93 14.42 C 18.93 13.55 19.24 12.84 19.75 12.28 C 19.67 12.08 19.39 11.27 19.83 10.18 C 19.83 10.18 20.5 9.97 22.02 11 C 22.66 10.82 23.33 10.73 24 10.73 C 24.67 10.73 25.34 10.82 25.98 11 C 27.5 9.97 28.17 10.18 28.17 10.18 C 28.61 11.27 28.33 12.08 28.25 12.28 C 28.76 12.84 29.07 13.55 29.07 14.42 C 29.07 17.49 27.19 18.17 25.4 18.37 C 25.7 18.63 25.96 19.14 25.96 19.91 C 25.96 21.02 25.95 21.92 25.95 22.2 C 25.95 22.42 26.1 22.67 26.5 22.59 C 29.68 21.53 31.97 18.53 31.97 15 C 31.97 10.58 28.42 7 24 7 Z" fill="#F8FAFC"/>
+                      </g>
+                      <!-- LinkedIn -->
+                      <g class="social-icon-btn" transform="translate(56, 0)">
+                        <rect width="48" height="28" rx="7" fill="#1E293B" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+                        <path d="M 19 11 C 19.83 11 20.5 10.33 20.5 9.5 C 20.5 8.67 19.83 8 19 8 C 18.17 8 17.5 8.67 17.5 9.5 C 17.5 10.33 18.17 11 19 11 Z M 17.7 12.5 L 20.3 12.5 L 20.3 21 L 17.7 21 Z M 22.2 12.5 L 24.7 12.5 L 24.7 13.7 L 24.73 13.7 C 25.08 13.04 25.93 12.35 27.19 12.35 C 29.82 12.35 30.3 14.08 30.3 16.33 L 30.3 21 L 27.7 21 L 27.7 16.92 C 27.7 15.95 27.68 14.7 26.35 14.7 C 25 14.7 24.8 15.75 24.8 16.85 L 24.8 21 L 22.2 21 Z" fill="#0A66C2"/>
+                      </g>
+                      <!-- Twitter -->
+                      <g class="social-icon-btn" transform="translate(112, 0)">
+                        <rect width="48" height="28" rx="7" fill="#1E293B" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+                        <path d="M 20.8 9 L 24.3 13.9 L 20 20 L 21.6 20 L 25.1 15.0 L 28.3 20 L 30.5 20 L 26.8 14.8 L 30.9 9 L 29.3 9 L 26.0 13.7 L 23 9 Z M 21.8 10.2 L 28.4 18.8 L 27.4 18.8 L 22.8 10.2 Z" fill="#F8FAFC"/>
+                      </g>
+                      <!-- Portfolio Web -->
+                      <g class="social-icon-btn" transform="translate(168, 0)">
+                        <rect width="66" height="28" rx="7" fill="#1E293B" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+                        <circle cx="24" cy="14" r="5" fill="none" stroke="#22D3EE" stroke-width="1.2"/>
+                        <line x1="19" y1="14" x2="29" y2="14" stroke="#22D3EE" stroke-width="1"/>
+                        <ellipse cx="24" cy="14" rx="2.5" ry="5" fill="none" stroke="#22D3EE" stroke-width="1"/>
+                        <text x="34" y="18" class="f-inter" font-size="10.5" font-weight="600" fill="#22D3EE">WEB</text>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+
+              <!-- Outer Frame Shimmer -->
+              <rect x="1" y="1" width="1198" height="618" rx="25" ry="25" fill="none" stroke="url(#border-shimmer-dark)" stroke-width="1.5"/>
+            </g>
+          </svg>
