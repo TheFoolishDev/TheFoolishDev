@@ -360,7 +360,7 @@
                       <g class="skill-pill" transform="translate(0, 0)">
                         <rect width="72" height="26" rx="13" fill="#1E293B" stroke="url(#pill-stroke-dark)" stroke-width="1.2"/>
                         <circle cx="14" cy="13" r="3" fill="#22D3EE"/>
-                        <text x="24" y="17" class="f-inter" font-size="11" font-weight="600" fill="#F8FAFC">Javascript</text>
+                        <text x="24" y="17" class="f-inter" font-size="11" font-weight="600" fill="#F8FAFC">PHP</text>
                       </g>
                       <g class="skill-pill" transform="translate(80, 0)">
                         <rect width="78" height="26" rx="13" fill="#1E293B" stroke="url(#pill-stroke-dark)" stroke-width="1.2"/>
@@ -380,7 +380,7 @@
                       <g class="skill-pill" transform="translate(360, 0)">
                         <rect width="84" height="26" rx="13" fill="#1E293B" stroke="url(#pill-stroke-dark)" stroke-width="1.2"/>
                         <circle cx="14" cy="13" r="3" fill="#38BDF8"/>
-                        <text x="24" y="17" class="f-inter" font-size="11" font-weight="600" fill="#F8FAFC">PHP</text>
+                        <text x="24" y="17" class="f-inter" font-size="11" font-weight="600" fill="#F8FAFC">Javascript</text>
                       </g>
                       <g class="skill-pill" transform="translate(452, 0)">
                         <rect width="68" height="26" rx="13" fill="#1E293B" stroke="url(#pill-stroke-dark)" stroke-width="1.2"/>
