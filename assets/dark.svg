@@ -302,7 +302,7 @@
                   <g>
                     <text x="0" y="14" class="f-mono" font-size="14" font-weight="500" fill="#22D3EE">$ whoami --verbose</text>
                     <text x="0" y="48" class="f-inter" font-size="32" font-weight="800" fill="#F8FAFC" letter-spacing="-0.5">
-                      Hi 👋 I'm <tspan fill="url(#accent-grad-dark)">ALEXANDER VANE</tspan>
+                      Hi 👋 I'm <tspan fill="url(#accent-grad-dark)">Iker Rivas</tspan>
                     </text>
                   </g>
 
@@ -311,9 +311,9 @@
                     <text x="0" y="0" class="f-mono" font-size="17" font-weight="600" fill="#94A3B8">&gt; </text>
                     <g class="role-1"><text x="22" y="0" class="f-mono" font-size="17" font-weight="600" fill="#22D3EE">Frontend Engineer &amp; UI Architect</text></g>
                     <g class="role-2"><text x="22" y="0" class="f-mono" font-size="17" font-weight="600" fill="#A855F7">Full Stack Developer &amp; Systems Builder</text></g>
-                    <g class="role-3"><text x="22" y="0" class="f-mono" font-size="17" font-weight="600" fill="#10B981">Open Source Contributor &amp; Creator</text></g>
+                    <g class="role-3"><text x="22" y="0" class="f-mono" font-size="17" font-weight="600" fill="#10B981">Open Source Consumer &amp; Creator</text></g>
                     <g class="role-4"><text x="22" y="0" class="f-mono" font-size="17" font-weight="600" fill="#38BDF8">Design Systems &amp; Motion Specialist</text></g>
-                    <g class="role-5"><text x="22" y="0" class="f-mono" font-size="17" font-weight="600" fill="#F59E0B">AI Enthusiast &amp; Cloud Explorer</text></g>
+                    <g class="role-5"><text x="22" y="0" class="f-mono" font-size="17" font-weight="600" fill="#F59E0B">AI Enthusiast &amp; Gemini Explorer</text></g>
                     <rect x="385" y="-14" width="8.5" height="17" rx="2" fill="#22D3EE" class="cur-blink"/>
                   </g>
 
@@ -323,14 +323,14 @@
                       <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.8s" fill="freeze"/>
                       <circle cx="8" cy="8" r="3.5" fill="#7C3AED"/>
                       <text x="20" y="12" class="f-mono" font-size="11.5" font-weight="600" fill="#94A3B8">Location:</text>
-                      <text x="120" y="12" class="f-inter" font-size="12" font-weight="500" fill="#F8FAFC">San Francisco, CA / Remote</text>
+                      <text x="120" y="12" class="f-inter" font-size="12" font-weight="500" fill="#F8FAFC">Caracas, Venezuela / Remote</text>
                     </g>
 
                     <g opacity="0" transform="translate(0, 24)">
                       <animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.0s" fill="freeze"/>
                       <circle cx="8" cy="8" r="3.5" fill="#22D3EE"/>
                       <text x="20" y="12" class="f-mono" font-size="11.5" font-weight="600" fill="#94A3B8">Education:</text>
-                      <text x="120" y="12" class="f-inter" font-size="12" font-weight="500" fill="#F8FAFC">B.S. Computer Science • Stanford Univ</text>
+                      <text x="120" y="12" class="f-inter" font-size="12" font-weight="500" fill="#F8FAFC">Computer Engineering • Universidad Catolica Andres Bello</text>
                     </g>
 
                     <g opacity="0" transform="translate(0, 48)">
@@ -344,7 +344,7 @@
                       <animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.4s" fill="freeze"/>
                       <circle cx="8" cy="8" r="3.5" fill="#F59E0B"/>
                       <text x="20" y="12" class="f-mono" font-size="11.5" font-weight="600" fill="#94A3B8">Connect:</text>
-                      <text x="120" y="12" class="f-inter" font-size="12" font-weight="500" fill="#38BDF8">vane.dev <tspan fill="#64748B">•</tspan> hello@vane.dev</text>
+                      <text x="120" y="12" class="f-inter" font-size="12" font-weight="500" fill="#38BDF8">TheFoolishDev <tspan fill="#64748B">•</tspan> ikerrivasl@gmail.com</text>
                     </g>
                   </g>
 
@@ -360,12 +360,12 @@
                       <g class="skill-pill" transform="translate(0, 0)">
                         <rect width="72" height="26" rx="13" fill="#1E293B" stroke="url(#pill-stroke-dark)" stroke-width="1.2"/>
                         <circle cx="14" cy="13" r="3" fill="#22D3EE"/>
-                        <text x="24" y="17" class="f-inter" font-size="11" font-weight="600" fill="#F8FAFC">React</text>
+                        <text x="24" y="17" class="f-inter" font-size="11" font-weight="600" fill="#F8FAFC">Javascript</text>
                       </g>
                       <g class="skill-pill" transform="translate(80, 0)">
                         <rect width="78" height="26" rx="13" fill="#1E293B" stroke="url(#pill-stroke-dark)" stroke-width="1.2"/>
                         <circle cx="14" cy="13" r="3" fill="#FFFFFF"/>
-                        <text x="24" y="17" class="f-inter" font-size="11" font-weight="600" fill="#F8FAFC">Next.js</text>
+                        <text x="24" y="17" class="f-inter" font-size="11" font-weight="600" fill="#F8FAFC">Java</text>
                       </g>
                       <g class="skill-pill" transform="translate(166, 0)">
                         <rect width="98" height="26" rx="13" fill="#1E293B" stroke="url(#pill-stroke-dark)" stroke-width="1.2"/>
@@ -380,7 +380,7 @@
                       <g class="skill-pill" transform="translate(360, 0)">
                         <rect width="84" height="26" rx="13" fill="#1E293B" stroke="url(#pill-stroke-dark)" stroke-width="1.2"/>
                         <circle cx="14" cy="13" r="3" fill="#38BDF8"/>
-                        <text x="24" y="17" class="f-inter" font-size="11" font-weight="600" fill="#F8FAFC">Tailwind</text>
+                        <text x="24" y="17" class="f-inter" font-size="11" font-weight="600" fill="#F8FAFC">PHP</text>
                       </g>
                       <g class="skill-pill" transform="translate(452, 0)">
                         <rect width="68" height="26" rx="13" fill="#1E293B" stroke="url(#pill-stroke-dark)" stroke-width="1.2"/>
@@ -404,7 +404,7 @@
                       <g class="skill-pill" transform="translate(180, 0)">
                         <rect width="64" height="26" rx="13" fill="#1E293B" stroke="url(#pill-stroke-dark)" stroke-width="1.2"/>
                         <circle cx="14" cy="13" r="3" fill="#FF9900"/>
-                        <text x="24" y="17" class="f-inter" font-size="11" font-weight="600" fill="#F8FAFC">AWS</text>
+                        <text x="24" y="17" class="f-inter" font-size="11" font-weight="600" fill="#F8FAFC">MySQL</text>
                       </g>
                       <g class="skill-pill" transform="translate(252, 0)">
                         <rect width="60" height="26" rx="13" fill="#1E293B" stroke="url(#pill-stroke-dark)" stroke-width="1.2"/>
@@ -415,11 +415,6 @@
                         <rect width="72" height="26" rx="13" fill="#1E293B" stroke="url(#pill-stroke-dark)" stroke-width="1.2"/>
                         <circle cx="14" cy="13" r="3" fill="#A855F7"/>
                         <text x="24" y="17" class="f-inter" font-size="11" font-weight="600" fill="#F8FAFC">Figma</text>
-                      </g>
-                      <g class="skill-pill" transform="translate(400, 0)">
-                        <rect width="84" height="26" rx="13" fill="#1E293B" stroke="url(#pill-stroke-dark)" stroke-width="1.2"/>
-                        <circle cx="14" cy="13" r="3" fill="#E10098"/>
-                        <text x="24" y="17" class="f-inter" font-size="11" font-weight="600" fill="#F8FAFC">GraphQL</text>
                       </g>
                     </g>
                   </g>
